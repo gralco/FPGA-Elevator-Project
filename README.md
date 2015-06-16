@@ -6,6 +6,7 @@ This project used the following tools:
 - [GTKWave](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Media/GTKWave%20Test%20Reset%20and%20en.png)
 - [Espresso](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Espresso/elevator_out.txt)
 - [Icarus Verilog](https://github.com/gralco/FPGA-Elevator-Project/blob/master/MyHDL/elevator)
+- [madebyevan FSM Designer](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Media/FSM%20Diagram.svg)
 
 Here are some materials that summarize the work:
 - [Document](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Documents/Elevator%20FSM.pdf)
