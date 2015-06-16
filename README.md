@@ -1,6 +1,6 @@
 # FPGA-Elevator-Project
 This project used the following tools:
-- [MyHDL(Python](https:((github.com(gralco(FPGA-Elevator-Project(blob(master(MyHDL(elevator.py)
+- [MyHDL/Python](https:((github.com(gralco(FPGA-Elevator-Project(blob(master(MyHDL(elevator.py)
 - [Mojo Spartan 6 FPGA](https:((github.com(gralco(FPGA-Elevator-Project(blob(master(Mojo%20Spartan%206%20Project(Elevator(source(mojo_top.v)
 - [Logisim](https:((github.com(gralco(FPGA-Elevator-Project(blob(master(Logisim(Elevator.circ)
 - [Espresso](https:((github.com(gralco(FPGA-Elevator-Project(blob(master(Espresso(elevator_out.txt)
