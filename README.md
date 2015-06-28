@@ -1,7 +1,7 @@
 # FPGA-Elevator-Project
 This project used the following tools:
 - [MyHDL/Python](https://github.com/gralco/FPGA-Elevator-Project/blob/master/MyHDL/elevator.py)
-- [Mojo Spartan 6 FPGA](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Mojo%20Spartan%206%20Project/Elevator/source/mojo_top.v)
+- [Mojo V3 - Xilinx Spartan 6 FPGA](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Mojo%20Spartan%206%20Project/Elevator/source/mojo_top.v)
 - [Logisim](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Logisim/Elevator.circ)
 - [GTKWave](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Media/GTKWave%20Test%20Reset%20and%20en.png)
 - [Espresso](https://github.com/gralco/FPGA-Elevator-Project/blob/master/Espresso/elevator_out.txt)
