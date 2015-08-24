@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.runs/impl_1/mojo_top_routed.ncd
+OUTFILE=/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.runs/impl_1/mojo_top.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.runs/impl_1
+LICENSE=WebPack
+USER_INFO=211028326_0_0_914

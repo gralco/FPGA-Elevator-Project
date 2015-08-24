@@ -1,0 +1,1737 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -o
+mojo_top.twr -v 30 -l 30 mojo_top_routed.ncd mojo_top.pcf
+
+Design file:              mojo_top_routed.ncd
+Physical constraint file: mojo_top.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report, limited to 30 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 476 paths analyzed, 95 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.666ns.
+--------------------------------------------------------------------------------
+Slack:                  17.823ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      2.051ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      2.051ns (1.631ns logic, 0.420ns route)
+                                                       (79.5% logic, 20.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.835ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      2.039ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.307   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_25
+    -------------------------------------------------  ---------------------------
+    Total                                      2.039ns (1.619ns logic, 0.420ns route)
+                                                       (79.4% logic, 20.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.902ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.972ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.240   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_24
+    -------------------------------------------------  ---------------------------
+    Total                                      1.972ns (1.552ns logic, 0.420ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.915ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_1 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.960ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_1 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.BQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_1
+    SLICE_X18Y14.B5      net (fanout=2)        0.244   slow_clk_q[1]
+    SLICE_X18Y14.COUT    Topcyb                0.448   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<1>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      1.960ns (1.698ns logic, 0.262ns route)
+                                                       (86.6% logic, 13.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.920ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_22 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.957ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.088ns (0.599 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.319   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_22
+    -------------------------------------------------  ---------------------------
+    Total                                      1.957ns (1.540ns logic, 0.417ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.920ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_23 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.957ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.088ns (0.599 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.319   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_23
+    -------------------------------------------------  ---------------------------
+    Total                                      1.957ns (1.540ns logic, 0.417ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.927ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_1 (FF)
+  Destination:          slow_clk_q_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.948ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_1 to slow_clk_q_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.BQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_1
+    SLICE_X18Y14.B5      net (fanout=2)        0.244   slow_clk_q[1]
+    SLICE_X18Y14.COUT    Topcyb                0.448   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<1>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.307   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_25
+    -------------------------------------------------  ---------------------------
+    Total                                      1.948ns (1.686ns logic, 0.262ns route)
+                                                       (86.6% logic, 13.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.932ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_21 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.945ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.088ns (0.599 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.307   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_21
+    -------------------------------------------------  ---------------------------
+    Total                                      1.945ns (1.528ns logic, 0.417ns route)
+                                                       (78.6% logic, 21.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.950ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_7 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.924ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_7 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.DQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_7
+    SLICE_X18Y15.D5      net (fanout=1)        0.460   slow_clk_q[7]
+    SLICE_X18Y15.COUT    Topcyd                0.290   slow_clk_q[7]
+                                                       slow_clk_q[7]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      1.924ns (1.449ns logic, 0.475ns route)
+                                                       (75.3% logic, 24.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.962ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_7 (FF)
+  Destination:          slow_clk_q_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.912ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_7 to slow_clk_q_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.DQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_7
+    SLICE_X18Y15.D5      net (fanout=1)        0.460   slow_clk_q[7]
+    SLICE_X18Y15.COUT    Topcyd                0.290   slow_clk_q[7]
+                                                       slow_clk_q[7]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.307   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_25
+    -------------------------------------------------  ---------------------------
+    Total                                      1.912ns (1.437ns logic, 0.475ns route)
+                                                       (75.2% logic, 24.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.981ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_0 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.894ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_0 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.AQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_0
+    SLICE_X18Y14.A6      net (fanout=2)        0.154   slow_clk_q[0]
+    SLICE_X18Y14.COUT    Topcya                0.472   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<0>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      1.894ns (1.722ns logic, 0.172ns route)
+                                                       (90.9% logic, 9.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.991ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_8 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.957ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.191 - 0.208)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_8 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y16.AQ      Tcko                  0.476   slow_clk_q[11]
+                                                       slow_clk_q_8
+    SLICE_X18Y16.A5      net (fanout=1)        0.405   slow_clk_q[8]
+    SLICE_X18Y16.COUT    Topcya                0.472   slow_clk_q[11]
+                                                       slow_clk_q[8]_rt
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      1.957ns (1.540ns logic, 0.417ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.993ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_0 (FF)
+  Destination:          slow_clk_q_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.882ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_0 to slow_clk_q_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.AQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_0
+    SLICE_X18Y14.A6      net (fanout=2)        0.154   slow_clk_q[0]
+    SLICE_X18Y14.COUT    Topcya                0.472   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<0>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.307   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_25
+    -------------------------------------------------  ---------------------------
+    Total                                      1.882ns (1.710ns logic, 0.172ns route)
+                                                       (90.9% logic, 9.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.994ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_1 (FF)
+  Destination:          slow_clk_q_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.881ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_1 to slow_clk_q_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.BQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_1
+    SLICE_X18Y14.B5      net (fanout=2)        0.244   slow_clk_q[1]
+    SLICE_X18Y14.COUT    Topcyb                0.448   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<1>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.240   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_24
+    -------------------------------------------------  ---------------------------
+    Total                                      1.881ns (1.619ns logic, 0.262ns route)
+                                                       (86.1% logic, 13.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.999ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_20 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.878ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.088ns (0.599 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.240   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_20
+    -------------------------------------------------  ---------------------------
+    Total                                      1.878ns (1.461ns logic, 0.417ns route)
+                                                       (77.8% logic, 22.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.003ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_8 (FF)
+  Destination:          slow_clk_q_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.945ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.191 - 0.208)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_8 to slow_clk_q_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y16.AQ      Tcko                  0.476   slow_clk_q[11]
+                                                       slow_clk_q_8
+    SLICE_X18Y16.A5      net (fanout=1)        0.405   slow_clk_q[8]
+    SLICE_X18Y16.COUT    Topcya                0.472   slow_clk_q[11]
+                                                       slow_clk_q[8]_rt
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.307   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_25
+    -------------------------------------------------  ---------------------------
+    Total                                      1.945ns (1.528ns logic, 0.417ns route)
+                                                       (78.6% logic, 21.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.012ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_1 (FF)
+  Destination:          slow_clk_q_23 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.866ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.087ns (0.599 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_1 to slow_clk_q_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.BQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_1
+    SLICE_X18Y14.B5      net (fanout=2)        0.244   slow_clk_q[1]
+    SLICE_X18Y14.COUT    Topcyb                0.448   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<1>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.319   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_23
+    -------------------------------------------------  ---------------------------
+    Total                                      1.866ns (1.607ns logic, 0.259ns route)
+                                                       (86.1% logic, 13.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.012ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_1 (FF)
+  Destination:          slow_clk_q_22 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.866ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.087ns (0.599 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_1 to slow_clk_q_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.BQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_1
+    SLICE_X18Y14.B5      net (fanout=2)        0.244   slow_clk_q[1]
+    SLICE_X18Y14.COUT    Topcyb                0.448   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<1>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.319   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_22
+    -------------------------------------------------  ---------------------------
+    Total                                      1.866ns (1.607ns logic, 0.259ns route)
+                                                       (86.1% logic, 13.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.015ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_5 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.859ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_5 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.BQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_5
+    SLICE_X18Y15.B5      net (fanout=1)        0.237   slow_clk_q[5]
+    SLICE_X18Y15.COUT    Topcyb                0.448   slow_clk_q[7]
+                                                       slow_clk_q[5]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      1.859ns (1.607ns logic, 0.252ns route)
+                                                       (86.4% logic, 13.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.015ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.863ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.087ns (0.600 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.CLK     Tcinck                0.319   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+                                                       slow_clk_q_18
+    -------------------------------------------------  ---------------------------
+    Total                                      1.863ns (1.449ns logic, 0.414ns route)
+                                                       (77.8% logic, 22.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.015ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.863ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.087ns (0.600 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.CLK     Tcinck                0.319   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+                                                       slow_clk_q_19
+    -------------------------------------------------  ---------------------------
+    Total                                      1.863ns (1.449ns logic, 0.414ns route)
+                                                       (77.8% logic, 22.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.024ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_1 (FF)
+  Destination:          slow_clk_q_21 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.854ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.087ns (0.599 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_1 to slow_clk_q_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.BQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_1
+    SLICE_X18Y14.B5      net (fanout=2)        0.244   slow_clk_q[1]
+    SLICE_X18Y14.COUT    Topcyb                0.448   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<1>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.307   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_21
+    -------------------------------------------------  ---------------------------
+    Total                                      1.854ns (1.595ns logic, 0.259ns route)
+                                                       (86.0% logic, 14.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.027ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_5 (FF)
+  Destination:          slow_clk_q_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.847ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_5 to slow_clk_q_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.BQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_5
+    SLICE_X18Y15.B5      net (fanout=1)        0.237   slow_clk_q[5]
+    SLICE_X18Y15.COUT    Topcyb                0.448   slow_clk_q[7]
+                                                       slow_clk_q[5]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.307   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_25
+    -------------------------------------------------  ---------------------------
+    Total                                      1.847ns (1.595ns logic, 0.252ns route)
+                                                       (86.4% logic, 13.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.027ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_4 (FF)
+  Destination:          slow_clk_q_17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.851ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.087ns (0.600 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_4 to slow_clk_q_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.AQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_4
+    SLICE_X18Y15.A5      net (fanout=1)        0.405   slow_clk_q[4]
+    SLICE_X18Y15.COUT    Topcya                0.472   slow_clk_q[7]
+                                                       slow_clk_q[4]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.CLK     Tcinck                0.307   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+                                                       slow_clk_q_17
+    -------------------------------------------------  ---------------------------
+    Total                                      1.851ns (1.437ns logic, 0.414ns route)
+                                                       (77.6% logic, 22.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.029ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_7 (FF)
+  Destination:          slow_clk_q_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.845ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.091ns (0.596 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_7 to slow_clk_q_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.DQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_7
+    SLICE_X18Y15.D5      net (fanout=1)        0.460   slow_clk_q[7]
+    SLICE_X18Y15.COUT    Topcyd                0.290   slow_clk_q[7]
+                                                       slow_clk_q[7]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.240   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_24
+    -------------------------------------------------  ---------------------------
+    Total                                      1.845ns (1.370ns logic, 0.475ns route)
+                                                       (74.3% logic, 25.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.040ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_0 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.835ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_0 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.AQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_0
+    SLICE_X18Y14.AX      net (fanout=2)        0.286   slow_clk_q[0]
+    SLICE_X18Y14.COUT    Taxcy                 0.281   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      1.835ns (1.531ns logic, 0.304ns route)
+                                                       (83.4% logic, 16.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.045ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_2 (FF)
+  Destination:          slow_clk_q_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.830ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_2 to slow_clk_q_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.CQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_2
+    SLICE_X18Y14.C5      net (fanout=2)        0.237   slow_clk_q[2]
+    SLICE_X18Y14.COUT    Topcyc                0.325   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_lut<2>
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.319   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_26
+    -------------------------------------------------  ---------------------------
+    Total                                      1.830ns (1.575ns logic, 0.255ns route)
+                                                       (86.1% logic, 13.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.047ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_7 (FF)
+  Destination:          slow_clk_q_23 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.830ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.088ns (0.599 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_7 to slow_clk_q_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.DQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_7
+    SLICE_X18Y15.D5      net (fanout=1)        0.460   slow_clk_q[7]
+    SLICE_X18Y15.COUT    Topcyd                0.290   slow_clk_q[7]
+                                                       slow_clk_q[7]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.319   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_23
+    -------------------------------------------------  ---------------------------
+    Total                                      1.830ns (1.358ns logic, 0.472ns route)
+                                                       (74.2% logic, 25.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.047ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_7 (FF)
+  Destination:          slow_clk_q_22 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.830ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.088ns (0.599 - 0.687)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_7 to slow_clk_q_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y15.DQ      Tcko                  0.476   slow_clk_q[7]
+                                                       slow_clk_q_7
+    SLICE_X18Y15.D5      net (fanout=1)        0.460   slow_clk_q[7]
+    SLICE_X18Y15.COUT    Topcyd                0.290   slow_clk_q[7]
+                                                       slow_clk_q[7]_rt
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.CLK     Tcinck                0.319   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+                                                       slow_clk_q_22
+    -------------------------------------------------  ---------------------------
+    Total                                      1.830ns (1.358ns logic, 0.472ns route)
+                                                       (74.2% logic, 25.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  18.052ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               slow_clk_q_0 (FF)
+  Destination:          slow_clk_q_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      1.823ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.596 - 0.686)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: slow_clk_q_0 to slow_clk_q_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y14.AQ      Tcko                  0.476   slow_clk_q[3]
+                                                       slow_clk_q_0
+    SLICE_X18Y14.AX      net (fanout=2)        0.286   slow_clk_q[0]
+    SLICE_X18Y14.COUT    Taxcy                 0.281   slow_clk_q[3]
+                                                       Maccum_slow_clk_q_cy<3>
+    SLICE_X18Y15.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[3]
+    SLICE_X18Y15.COUT    Tbyp                  0.091   slow_clk_q[7]
+                                                       Maccum_slow_clk_q_cy<7>
+    SLICE_X18Y16.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[7]
+    SLICE_X18Y16.COUT    Tbyp                  0.091   slow_clk_q[11]
+                                                       Maccum_slow_clk_q_cy<11>
+    SLICE_X18Y17.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[11]
+    SLICE_X18Y17.COUT    Tbyp                  0.091   slow_clk_q[15]
+                                                       Maccum_slow_clk_q_cy<15>
+    SLICE_X18Y18.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[15]
+    SLICE_X18Y18.COUT    Tbyp                  0.091   slow_clk_q[19]
+                                                       Maccum_slow_clk_q_cy<19>
+    SLICE_X18Y19.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[19]
+    SLICE_X18Y19.COUT    Tbyp                  0.091   slow_clk_q[23]
+                                                       Maccum_slow_clk_q_cy<23>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   Maccum_slow_clk_q_cy[23]
+    SLICE_X18Y20.CLK     Tcinck                0.307   slow_clk_q[26]
+                                                       Maccum_slow_clk_q_xor<26>
+                                                       slow_clk_q_25
+    -------------------------------------------------  ---------------------------
+    Total                                      1.823ns (1.519ns logic, 0.304ns route)
+                                                       (83.3% logic, 16.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 17.334ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X2Y11.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[3]/SR
+  Logical resource: slow_clk_q_0/SR
+  Location pin: SLICE_X18Y14.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[3]/SR
+  Logical resource: slow_clk_q_1/SR
+  Location pin: SLICE_X18Y14.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[3]/SR
+  Logical resource: slow_clk_q_2/SR
+  Location pin: SLICE_X18Y14.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[3]/SR
+  Logical resource: slow_clk_q_3/SR
+  Location pin: SLICE_X18Y14.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[7]/SR
+  Logical resource: slow_clk_q_4/SR
+  Location pin: SLICE_X18Y15.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[7]/SR
+  Logical resource: slow_clk_q_5/SR
+  Location pin: SLICE_X18Y15.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[7]/SR
+  Logical resource: slow_clk_q_6/SR
+  Location pin: SLICE_X18Y15.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[7]/SR
+  Logical resource: slow_clk_q_7/SR
+  Location pin: SLICE_X18Y15.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[11]/SR
+  Logical resource: slow_clk_q_8/SR
+  Location pin: SLICE_X18Y16.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[11]/SR
+  Logical resource: slow_clk_q_9/SR
+  Location pin: SLICE_X18Y16.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[11]/SR
+  Logical resource: slow_clk_q_10/SR
+  Location pin: SLICE_X18Y16.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[11]/SR
+  Logical resource: slow_clk_q_11/SR
+  Location pin: SLICE_X18Y16.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[15]/SR
+  Logical resource: slow_clk_q_12/SR
+  Location pin: SLICE_X18Y17.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[15]/SR
+  Logical resource: slow_clk_q_13/SR
+  Location pin: SLICE_X18Y17.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[15]/SR
+  Logical resource: slow_clk_q_14/SR
+  Location pin: SLICE_X18Y17.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[15]/SR
+  Logical resource: slow_clk_q_15/SR
+  Location pin: SLICE_X18Y17.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[19]/SR
+  Logical resource: slow_clk_q_16/SR
+  Location pin: SLICE_X18Y18.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[19]/SR
+  Logical resource: slow_clk_q_17/SR
+  Location pin: SLICE_X18Y18.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[19]/SR
+  Logical resource: slow_clk_q_18/SR
+  Location pin: SLICE_X18Y18.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[19]/SR
+  Logical resource: slow_clk_q_19/SR
+  Location pin: SLICE_X18Y18.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[23]/SR
+  Logical resource: slow_clk_q_20/SR
+  Location pin: SLICE_X18Y19.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[23]/SR
+  Logical resource: slow_clk_q_21/SR
+  Location pin: SLICE_X18Y19.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[23]/SR
+  Logical resource: slow_clk_q_22/SR
+  Location pin: SLICE_X18Y19.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[23]/SR
+  Logical resource: slow_clk_q_23/SR
+  Location pin: SLICE_X18Y19.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[26]/SR
+  Logical resource: slow_clk_q_24/SR
+  Location pin: SLICE_X18Y20.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[26]/SR
+  Logical resource: slow_clk_q_25/SR
+  Location pin: SLICE_X18Y20.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.524ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.238ns (Trpw)
+  Physical resource: slow_clk_q[26]/SR
+  Logical resource: slow_clk_q_26/SR
+  Location pin: SLICE_X18Y20.SR
+  Clock network: rst
+--------------------------------------------------------------------------------
+Slack: 19.525ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: slow_clk_q[3]/CLK
+  Logical resource: slow_clk_q_0/CK
+  Location pin: SLICE_X18Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.525ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: slow_clk_q[3]/CLK
+  Logical resource: slow_clk_q_1/CK
+  Location pin: SLICE_X18Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.177|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 476 paths, 0 nets, and 45 connections
+
+Design statistics:
+   Minimum period:   2.666ns{1}   (Maximum frequency: 375.094MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Aug 23 21:29:56 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 390 MB
+
+
+

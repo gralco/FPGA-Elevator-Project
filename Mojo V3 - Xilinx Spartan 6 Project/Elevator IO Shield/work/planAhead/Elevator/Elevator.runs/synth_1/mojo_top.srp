@@ -1,0 +1,532 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: mojo_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx9tqg144-2
+Output File Name                   : "mojo_top.ngc"
+
+---- Source Options
+Top Module Name                    : mojo_top
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.srcs/sources_1/imports/verilog/elevator.v" into library work
+Parsing module <elevator>.
+Analyzing Verilog file "/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.srcs/sources_1/imports/verilog/mojo_top.v" into library work
+Parsing module <mojo_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top>.
+WARNING:HDLCompiler:91 - "/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.srcs/sources_1/imports/verilog/mojo_top.v" Line 45: Signal <io_dip> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.srcs/sources_1/imports/verilog/mojo_top.v" Line 47: Signal <io_dip> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.srcs/sources_1/imports/verilog/mojo_top.v" Line 49: Signal <io_dip> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <elevator>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top>.
+    Related source file is "/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.srcs/sources_1/imports/verilog/mojo_top.v".
+WARNING:Xst:647 - Input <io_dip<21:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 27-bit register for signal <slow_clk_q>.
+    Found 27-bit adder for signal <slow_clk_q[26]_GND_1_o_add_1_OUT> created at line 46.
+    Found 27-bit adder for signal <slow_clk_q[26]_GND_1_o_add_2_OUT> created at line 48.
+    Found 27-bit adder for signal <slow_clk_q[26]_GND_1_o_add_3_OUT> created at line 50.
+    Found 27-bit adder for signal <slow_clk_q[26]_GND_1_o_add_4_OUT> created at line 52.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 38
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 39
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 40
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 40
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 40
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 40
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   6 Tristate(s).
+Unit <mojo_top> synthesized.
+
+Synthesizing Unit <elevator>.
+    Related source file is "/home/ekuzmenko/mojo-ide-B1.2.1/Projects/Elevator/work/planAhead/Elevator/Elevator.srcs/sources_1/imports/verilog/elevator.v".
+    Found 4-bit register for signal <Q>.
+WARNING:Xst:737 - Found 1-bit latch for signal <B>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <A_latch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <B_latch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <A>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   4 Latch(s).
+Unit <elevator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 27-bit adder                                          : 1
+# Registers                                            : 2
+ 27-bit register                                       : 1
+ 4-bit register                                        : 1
+# Latches                                              : 4
+ 1-bit latch                                           : 4
+# Multiplexers                                         : 3
+ 27-bit 2-to-1 multiplexer                             : 3
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 6
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <mojo_top>.
+The following registers are absorbed into accumulator <slow_clk_q>: 1 register on signal <slow_clk_q>.
+Unit <mojo_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Accumulators                                         : 1
+ 27-bit up accumulator                                 : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Multiplexers                                         : 3
+ 27-bit 2-to-1 multiplexer                             : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mojo_top> ...
+
+Optimizing unit <elevator> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top, actual ratio is 0.
+Latch real_deal/A has been replicated 1 time(s) to handle iob=true attribute.
+Latch real_deal/B has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 97
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 23
+#      LUT2                        : 6
+#      LUT3                        : 5
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 3
+#      MUXCY                       : 26
+#      VCC                         : 1
+#      XORCY                       : 27
+# FlipFlops/Latches                : 37
+#      FDC                         : 27
+#      FDCE                        : 4
+#      LDCE_1                      : 2
+#      LDE_1                       : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 70
+#      IBUF                        : 8
+#      OBUF                        : 56
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              35  out of  11440     0%  
+ Number of Slice LUTs:                   42  out of   5720     0%  
+    Number used as Logic:                42  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     44
+   Number with an unused Flip Flop:       9  out of     44    20%  
+   Number with an unused LUT:             2  out of     44     4%  
+   Number of fully used LUT-FF pairs:    33  out of     44    75%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          99
+ Number of bonded IOBs:                  71  out of    102    69%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+---------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)     | Load  |
+--------------------------------------+---------------------------+-------+
+clk                                   | BUFGP                     | 27    |
+real_deal/n0000(real_deal/n0000<3>1:O)| NONE(*)(real_deal/A_latch)| 6     |
+slow_clk_q_26                         | NONE(real_deal/Q_3)       | 4     |
+--------------------------------------+---------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.539ns (Maximum Frequency: 393.893MHz)
+   Minimum input arrival time before clock: 4.259ns
+   Maximum output required time after clock: 5.768ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.539ns (frequency: 393.893MHz)
+  Total number of paths / destination ports: 476 / 27
+-------------------------------------------------------------------------
+Delay:               2.539ns (Levels of Logic = 2)
+  Source:            slow_clk_q_26 (FF)
+  Destination:       slow_clk_q_26 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: slow_clk_q_26 to slow_clk_q_26
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             33   0.525   1.537  slow_clk_q_26 (slow_clk_q_26)
+     LUT1:I0->O            0   0.254   0.000  Maccum_slow_clk_q_xor<26>_rt (Maccum_slow_clk_q_xor<26>_rt)
+     XORCY:LI->O           1   0.149   0.000  Maccum_slow_clk_q_xor<26> (Result<26>)
+     FDC:D                     0.074          slow_clk_q_26
+    ----------------------------------------
+    Total                      2.539ns (1.002ns logic, 1.537ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'real_deal/n0000'
+  Clock period: 1.298ns (frequency: 770.416MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.298ns (Levels of Logic = 0)
+  Source:            real_deal/A (LATCH)
+  Destination:       real_deal/A_latch (LATCH)
+  Source Clock:      real_deal/n0000 rising
+  Destination Clock: real_deal/n0000 rising
+
+  Data Path: real_deal/A to real_deal/A_latch
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.581   0.681  A (A)
+     LDCE_1:D                  0.036          A_latch
+    ----------------------------------------
+    Total                      1.298ns (0.617ns logic, 0.681ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'slow_clk_q_26'
+  Clock period: 1.996ns (frequency: 501.002MHz)
+  Total number of paths / destination ports: 16 / 4
+-------------------------------------------------------------------------
+Delay:               1.996ns (Levels of Logic = 1)
+  Source:            real_deal/Q_1 (FF)
+  Destination:       real_deal/Q_3 (FF)
+  Source Clock:      slow_clk_q_26 rising
+  Destination Clock: slow_clk_q_26 rising
+
+  Data Path: real_deal/Q_1 to real_deal/Q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.525   1.147  Q_1 (Q_1)
+     LUT6:I4->O            2   0.250   0.000  D<0>1 (D<0>)
+     FDCE:D                    0.074          Q_0
+    ----------------------------------------
+    Total                      1.996ns (0.849ns logic, 1.147ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 231 / 54
+-------------------------------------------------------------------------
+Offset:              4.259ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       slow_clk_q_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst_n to slow_clk_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             33   0.255   1.536  rst1_INV_0 (rst)
+     FDC:CLR                   0.459          slow_clk_q_0
+    ----------------------------------------
+    Total                      4.259ns (2.042ns logic, 2.217ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'real_deal/n0000'
+  Total number of paths / destination ports: 18 / 12
+-------------------------------------------------------------------------
+Offset:              4.259ns (Levels of Logic = 3)
+  Source:            rst_n (PAD)
+  Destination:       real_deal/A_latch (LATCH)
+  Destination Clock: real_deal/n0000 rising
+
+  Data Path: rst_n to real_deal/A_latch
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             33   0.255   1.536  rst1_INV_0 (rst)
+     begin scope: 'real_deal:reset'
+     LDCE_1:CLR                0.459          B_latch
+    ----------------------------------------
+    Total                      4.259ns (2.042ns logic, 2.217ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'slow_clk_q_26'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.259ns (Levels of Logic = 3)
+  Source:            rst_n (PAD)
+  Destination:       real_deal/Q_3 (FF)
+  Destination Clock: slow_clk_q_26 rising
+
+  Data Path: rst_n to real_deal/Q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             33   0.255   1.536  rst1_INV_0 (rst)
+     begin scope: 'real_deal:reset'
+     FDCE:CLR                  0.459          Q_0
+    ----------------------------------------
+    Total                      4.259ns (2.042ns logic, 2.217ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Offset:              4.973ns (Levels of Logic = 1)
+  Source:            slow_clk_q_26 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: slow_clk_q_26 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             33   0.525   1.536  slow_clk_q_26 (slow_clk_q_26)
+     OBUF:I->O                 2.912          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                      4.973ns (3.437ns logic, 1.536ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'slow_clk_q_26'
+  Total number of paths / destination ports: 38 / 18
+-------------------------------------------------------------------------
+Offset:              5.599ns (Levels of Logic = 3)
+  Source:            real_deal/Q_1 (FF)
+  Destination:       led<1> (PAD)
+  Source Clock:      slow_clk_q_26 rising
+
+  Data Path: real_deal/Q_1 to led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.525   1.147  Q_1 (Q_1)
+     LUT2:I0->O            3   0.250   0.765  LED<1>1 (io_seg<3>)
+     end scope: 'real_deal:io_seg<3>'
+     OBUF:I->O                 2.912          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      5.599ns (3.687ns logic, 1.912ns route)
+                                       (65.9% logic, 34.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'real_deal/n0000'
+  Total number of paths / destination ports: 11 / 8
+-------------------------------------------------------------------------
+Offset:              5.768ns (Levels of Logic = 3)
+  Source:            real_deal/B_latch (LATCH)
+  Destination:       D<3> (PAD)
+  Source Clock:      real_deal/n0000 rising
+
+  Data Path: real_deal/B_latch to D<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE_1:G->Q           5   0.581   1.296  B_latch (B_latch)
+     LUT6:I0->O            2   0.254   0.725  D<3>1 (D<3>)
+     end scope: 'real_deal:D<3>'
+     OBUF:I->O                 2.912          D_3_OBUF (D<3>)
+    ----------------------------------------
+    Total                      5.768ns (3.747ns logic, 2.021ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.539|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock real_deal/n0000
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+real_deal/n0000|    1.298|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock slow_clk_q_26
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+real_deal/n0000|    2.205|         |         |         |
+slow_clk_q_26  |    1.996|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.36 secs
+ 
+--> 
+
+
+Total memory usage is 489096 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

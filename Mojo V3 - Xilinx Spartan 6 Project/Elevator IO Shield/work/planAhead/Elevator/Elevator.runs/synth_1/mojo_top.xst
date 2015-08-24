@@ -1,0 +1,9 @@
+set -loop_iteration_limit 1000
+run
+-ifn mojo_top.prj
+-top mojo_top
+-p xc6slx9tqg144-2
+-ofn mojo_top.ngc
+-opt_mode speed
+-opt_level 1
+-netlist_hierarchy rebuilt
