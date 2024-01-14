@@ -10,9 +10,10 @@ library ieee;
 
 entity elevator is
   port (
+    -- only a single button is displacing one if the f(*) inputs
+    -- if four buttons were used then they can be mapped to f(*) accordingly
     clk     : in    std_logic;
-    reset   : in    std_logic;
-    en      : in    std_logic;
+    button  : in    std_logic;
     f       : in    unsigned(3 downto 0);
     d       : inout unsigned(3 downto 0);
     q       : inout unsigned(3 downto 0);
@@ -20,31 +21,73 @@ entity elevator is
     b       : inout std_logic;
     a_latch : inout std_logic;
     b_latch : inout std_logic;
-    led     : out   unsigned(3 downto 0)
+    led1    : out   std_logic;
+    led2    : out   std_logic;
+    led3    : out   std_logic;
+    led4    : out   std_logic;
+    led5    : out   std_logic
   );
 end entity elevator;
 
 architecture myhdl of elevator is
 
+  signal clk_1hz : std_logic;
+  signal leds    : unsigned (3 downto 0);
+  signal reset   : std_logic := '0';
+  signal en      : std_logic := '1';
+
 begin
 
-  elevator_encoder : process (en, f) is
+  counting : process (clk) is
+
+    --  12_000_000 is 0xb71b00
+    variable counter : unsigned (23 downto 0) := x"000001";
+
   begin
 
-    if (bool(f) and bool(en)) then
-      a <= stdl(bool(f(3)) or (bool(f(1)) and (not bool(f(2)))));
-      b <= stdl(bool(f(2)) or bool(f(3)));
+    if rising_edge(clk) then
+      if (reset = '1') then
+        counter := x"000000";
+      elsif (counter < 11_999_999) then
+        counter := counter + 1;
+      else
+        counter := x"000000";
+      end if;
+    end if;
+
+    if falling_edge(clk) then
+      if (counter >= 11_999_999) then
+        clk_1hz <= '1';
+      elsif (clk_1hz = '1') then
+        clk_1hz <= '0';
+      end if;
+    end if;
+
+  end process counting;
+
+  (led4, led3, led2, led1) <= leds;
+  led5                     <= not button;
+
+  elevator_encoder : process (en, f, button) is
+  begin
+
+    -- (not button) replaced f(3) here
+    if (bool(not button) and bool(en)) then
+      a <= stdl(bool(not button) or (bool(f(1)) and (not bool(f(2)))));
+      b <= stdl(bool(f(2)) or bool(not button));
     end if;
 
   end process elevator_encoder;
 
-  elevator_latch : process (reset, a, b, en, f) is
+  -- button is taking the place of f in the sensitivity list
+  -- if four input buttons are used then map them to f(*) and bring f back onto the sensitity list
+  elevator_latch : process (reset, a, b, en, button) is
   begin
 
     if bool(reset) then
       a_latch <= '0';
       b_latch <= '0';
-    elsif (bool(f) and bool(en)) then
+    elsif (bool(not button) and bool(en)) then
       a_latch <= a;
       b_latch <= b;
     end if;
@@ -62,16 +105,16 @@ begin
     if (reset = '1') then
       q <= to_unsigned(0, 4);
     elsif rising_edge(clk) then
-      if bool(en) then
+      if (bool(en) and clk_1hz = '1') then
         q <= d;
       end if;
     end if;
 
   end process elevator_dff;
 
-  led <= unsigned'((q(1) and q(0)) &
-                   (q(1) and (not q(0))) &
-                   ((not q(1)) and q(0)) &
-                   ((not q(1)) and (not q(0))));
+  leds <= unsigned'((q(1) and q(0)) &
+                    (q(1) and (not q(0))) &
+                    ((not q(1)) and q(0)) &
+                    ((not q(1)) and (not q(0))));
 
 end architecture myhdl;

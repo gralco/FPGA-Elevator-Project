@@ -6,3 +6,7 @@ rule:
   # Allow default variable assignments
   variable_007:
     disable: true
+
+  # Set the max line length to 441 characters
+  length_001 :
+     length : 441
