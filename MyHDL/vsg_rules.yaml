@@ -1,0 +1,8 @@
+rule:
+  # Allow default signal assignments
+  signal_007:
+    disable: true
+
+  # Allow default variable assignments
+  variable_007:
+    disable: true

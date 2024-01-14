@@ -1,0 +1,13 @@
+{
+    "options": {
+        "ghdl_analysis": [
+            "--workdir=work",
+            "--ieee=synopsys",
+            "-fexplicit"
+        ]
+    },
+    "files": [
+        { "file": "./pck_myhdl_081.vhd", "library" : "work", "language": "vhdl" },
+        { "file": "./elevator.vhd", "language": "vhdl" }
+    ]
+}
